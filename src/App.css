@@ -1,0 +1,62 @@
+#root {
+  text-align: center;
+  margin: 10px;
+}
+.places-ui-kit{
+  display: flex;
+  width: auto;
+  flex-direction: row;
+}
+.place-list-wrapper {
+  margin: 5px;
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  height: 95vh;
+  overflow-y: auto;
+  right: 20%;
+}
+.place-list-container {
+  background-color: white;
+  height: 0;
+  flex: 1;
+}
+.map-container {
+  position: relative;
+  margin: 5px;
+  height: 95vh;
+  width: 120vh;
+  display: flex;
+  flex-direction: column;
+}
+.autocomplete-wrapper {
+  position: center;
+  background-color: white;
+  width: auto;
+  top: 2px;
+  left: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow:
+    0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
+}
+#detailsSize {
+  margin-bottom: 8px;
+}
+.changeRadius{
+  display: flex;
+  position: absolute;
+  margin: 1rem;
+  left: 71%;
+  white-space: nowrap;
+}
+.controlPanel{
+  margin-top: 7px;
+}
+.near{
+  white-space: nowrap;
+}
