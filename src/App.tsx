@@ -37,7 +37,7 @@ function App() {
 const MAP_CONFIG = {
   defaultZoom: 14,
   defaultCenter:{ lat: 34.67510111, lng: 135.50037173 },
-  mapId: import.meta.env.VITE_MARKETS_MAP_ID,
+  mapId: import.meta.env.VITE_MOVING_MAP_ID,
   gestureHandling: 'greedy' as const,
   // clickableIcons: false,
     // disableDefaultUI: true,
