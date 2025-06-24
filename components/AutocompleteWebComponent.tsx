@@ -33,9 +33,9 @@ export const AutocompleteWebComponent = ({onPlaceSelect}: Props) => {
         });
 
         // If the place has a viewport (area boundaries), adjust the map to show it
-        if (place?.viewport) {
-          map?.fitBounds(place.viewport);
-        }
+      if (place?.location) {
+        map?.setCenter(place.location);
+      }
 
         onPlaceSelect(place);
       } catch (error) {
