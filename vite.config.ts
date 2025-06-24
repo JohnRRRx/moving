@@ -7,7 +7,8 @@ export default defineConfig({
   server:{
     host:'0.0.0.0',
     port: 6666,
-    allowedHosts: ['moving-x1sf.onrender.com'],
+    allowedHosts: ['moving-0yu1.onrender.com'],
+  
   }
 })
 
