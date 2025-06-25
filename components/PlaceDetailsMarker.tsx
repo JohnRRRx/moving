@@ -3,7 +3,8 @@ import {
   AdvancedMarker,
   InfoWindow,
   useAdvancedMarkerRef,
-  useMapsLibrary
+  useMapsLibrary,
+  useMap
 } from '@vis.gl/react-google-maps';
 
 import type {DetailsSize} from '../src/App';
@@ -22,13 +23,23 @@ export const PlaceDetailsMarker = memo(
     // Load required Google Maps libraries for places and elevation data
     useMapsLibrary('places');
     useMapsLibrary('elevation');
+    const map = useMap();
 
-    // Handle marker click to select this place
     const handleMarkerClick = useCallback(() => {
       onClick(place.id);
-    }, [onClick, place.id]);
 
-    // Handle info window close by deselecting this place
+  if (place.location && map) {
+    const pos = place.location.toJSON();
+    map.setCenter({ lat: pos.lat, lng: pos.lng });
+
+    const mapDiv = map.getDiv();
+    const height = mapDiv.clientHeight;
+    map.panBy(0, -height / 3);
+  }
+}, [onClick, place.id, place.location, map]);
+    // // Handle marker click to select this place
+
+    // // Handle info window close by deselecting this place
     const handleCloseClick = useCallback(() => {
       onClick(null);
     }, [onClick]);
