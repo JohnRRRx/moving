@@ -94,6 +94,14 @@ export const PlaceListWebComponent = ({
         ongmp-placeselect={(event: {
           place: google.maps.places.Place | null;
         }) => {
+          const place = event.place;
+          if (place?.location && map) {
+            const pos = place.location.toJSON();
+            map.setCenter({ lat: pos.lat, lng: pos.lng });
+            const mapDiv = map.getDiv();
+            const height = mapDiv.clientHeight;
+            map.panBy(0, -height / 3);
+          }
           onPlaceSelect(event.place);
         }}
       />
