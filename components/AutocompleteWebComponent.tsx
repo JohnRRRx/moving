@@ -82,6 +82,7 @@ export const AutocompleteWebComponent = ({onPlaceSelect}: Props) => {
         - ongmp-placeselect: Deprecated but still used in beta channel
       */}
       <gmp-place-autocomplete
+        requested-language="ja"
         ongmp-select={handleGmpSelect as any}
         ongmp-placeselect={handleGmpPlaceSelect as any}
         aria-label="Search for a location"
