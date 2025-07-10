@@ -1,55 +1,35 @@
-# React + TypeScript + Vite
+# いろいろMap  
+[Link](https://moving-0yu1.onrender.com)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  
+### 目次
+ - [サービス概要](#サービス概要)
+ - [開発背景](#開発背景)
+ - [機能紹介](#機能紹介)
+ - [使用技術](#使用技術)
 
-Currently, two official plugins are available:
+ ## サービス概要  
+周辺施設を検索・確認できる、地図ベースの生活環境調査アプリです。  
+引越し先の調査や地域探索に活用できます。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  
+ ## 開発背景  
+ 
+Google Maps API、React、TypeScriptのキャッチアップを目的に開発しました。  
+生活の利便性を「スーパーや駅など周囲にある施設の多さ」で判断する自分の価値観から着想を得ました。
 
-## Expanding the ESLint configuration
+ ## 機能紹介
+|![](https://imgpoi.com/i/8572EE.gif)　| ![](https://imgpoi.com/i/857MWB.gif) |
+|:-----------:|:------------:|
+|AutoComplete機能|10km圏内円描画機能|
+|![](https://imgpoi.com/i/85K979.gif)|![](https://imgpoi.com/i/85K5NG.gif)|
+|ジャンル選択機能|表示切替機能|
+  
+ ## 使用技術	
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# moving
+|  | 技術 |
+|:-----------:|:------------:|
+|Frontend| React, TypeScript, HTML, CSS|
+|Hosting|Render|
+|Version Control|GitHub|
+|External API|GoogleMapAPI|
